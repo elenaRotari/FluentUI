@@ -1,8 +1,11 @@
-import { makeStyles, shorthands } from "@griffel/react";
+import { makeStyles, shorthands, mergeClasses } from "@griffel/react";
 import { Link } from "react-router-dom";
 import img from "/img.jpg";
 
 const useClasses = makeStyles({
+  root: {
+    textDecorationLine: "none",
+  },
   img: {
     width: "50px",
     objectFit: "cover",
@@ -11,31 +14,51 @@ const useClasses = makeStyles({
   },
   nav: {
     backgroundColor: "#444444",
-    ...shorthands.padding("5px"),
+    ...shorthands.padding("10px"),
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   },
+  ul: {
+    display: "flex",
+    ...shorthands.gap("2rem"),
+    ...shorthands.padding("2rem"),
+  },
   list: {
-    color: "white",
     listStyleType: "none",
+  },
+  link: {
+    color: "white",
+    fontSize: "1.3rem",
+    fontWeight: "900",
+
+    ":focus": {
+      color: "red",
+    },
   },
 });
 function NavBar() {
   const classes = useClasses();
+  const mergeclasses = mergeClasses(classes.root, classes.link);
   return (
     <div className={classes.nav}>
       <img src={img} alt="img" className={classes.img} />
-      <ul>
-        <Link className={classes.list} to="/about">
-          About
-        </Link>
-        <Link className={classes.list} to="/cards">
-          Cards
-        </Link>
-        <Link className={classes.list} to="/contacts">
-          Contacts
-        </Link>
+      <ul className={classes.ul}>
+        <li className={classes.list}>
+          <Link className={mergeclasses} to="/about">
+            About
+          </Link>
+        </li>
+        <li className={classes.list}>
+          <Link className={mergeclasses} to="/cards">
+            Cards
+          </Link>
+        </li>
+        <li className={classes.list}>
+          <Link className={mergeclasses} to="/contacts">
+            Contacts
+          </Link>
+        </li>
       </ul>
     </div>
   );
