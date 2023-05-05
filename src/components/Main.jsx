@@ -11,7 +11,6 @@ const useClasses = makeStyles({
     display: "flex",
     flexDirection: "row-reverse",
     justifyContent: "space-between",
-    flex: "1",
   },
 });
 

@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     width: "100%",
     textAlign: "justify",
     fontSize: "1.2rem",
-    lineHeight: "1.6rem",
+    lineHeight: "2rem",
   },
   header: {
     fontSize: "2rem",

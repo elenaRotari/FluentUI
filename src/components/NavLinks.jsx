@@ -8,14 +8,16 @@ const styles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
-  img: {},
+  img: {
+    width: "250px",
+  },
 });
 function NavLinks() {
   const classes = styles();
 
   return (
     <div className={classes.root}>
-      <img src={img} alt="" />
+      <img src={img} alt="" className={styles.img} />
     </div>
   );
 }

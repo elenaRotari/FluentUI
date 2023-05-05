@@ -5,7 +5,8 @@ import Cards from "../components/Cards.jsx";
 import Contacts from "../components/Contacts.jsx";
 import Main from "../components/Main.jsx";
 import Mainright from "../components/Mainright.jsx";
-import { loader as loader } from "../components/Cards.jsx";
+import { loader } from "../components/Cards.jsx";
+import OneCard, { card } from "../components/OneCard.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
                 path: "/cards",
                 element: <Cards />,
                 loader: loader,
+              },
+              {
+                path: ":id",
+                element: <OneCard />,
+                loader: card,
               },
 
               {
