@@ -39,23 +39,23 @@ const useClasses = makeStyles({
 });
 function NavBar() {
   const classes = useClasses();
-  const mergeclasses = mergeClasses(classes.root, classes.link);
+  const mergeclasses1 = mergeClasses(classes.root, classes.link);
   return (
     <div className={classes.nav}>
       <img src={img} alt="img" className={classes.img} />
       <ul className={classes.ul}>
         <li className={classes.list}>
-          <Link className={mergeclasses} to="/about">
+          <Link className={mergeclasses1} to="/about">
             About
           </Link>
         </li>
         <li className={classes.list}>
-          <Link className={mergeclasses} to="/cards">
+          <Link className={mergeclasses1} to="/cards">
             Cards
           </Link>
         </li>
         <li className={classes.list}>
-          <Link className={mergeclasses} to="/contacts">
+          <Link className={mergeclasses1} to="/contacts">
             Contacts
           </Link>
         </li>

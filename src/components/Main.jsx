@@ -5,16 +5,20 @@ import NavLinks from "./NavLinks.jsx";
 import { makeStyles, shorthands } from "@griffel/react";
 
 const useClasses = makeStyles({
-  button: {
-    color: "yellow",
-    backgroundColor: "#444444",
-    ...shorthands.padding("0.7rem, 1.5rem"),
+  cont: {
+    backgroundColor: "#cfd7df",
+    ...shorthands.padding("5rem"),
+    display: "flex",
+    flexDirection: "row-reverse",
+    justifyContent: "space-between",
+    flex: 1,
   },
 });
 
 function Main() {
+  const classes = useClasses();
   return (
-    <div>
+    <div className={classes.cont}>
       <NavLinks />
       <Outlet />
     </div>

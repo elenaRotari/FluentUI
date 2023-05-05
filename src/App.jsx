@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {isAdmin ? <Outlet /> : <h1>Please login</h1>}
+      <Outlet />
     </div>
   );
 }
