@@ -18,10 +18,13 @@ const useStyles = makeStyles({
     backgroundColor: "inherit",
     width: "100%",
     textAlign: "justify",
+    fontSize: "1.2rem",
+    lineHeight: "1.6rem",
   },
   header: {
-    fontSize: "1.3rem",
+    fontSize: "2rem",
     color: "red",
+    fontWeight: "900",
   },
 });
 

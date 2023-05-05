@@ -5,6 +5,7 @@ import Cards from "../components/Cards.jsx";
 import Contacts from "../components/Contacts.jsx";
 import Main from "../components/Main.jsx";
 import Mainright from "../components/Mainright.jsx";
+import { loader as loader } from "../components/Cards.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
               {
                 path: "/cards",
                 element: <Cards />,
+                loader: loader,
               },
 
               {
